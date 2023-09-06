@@ -1,0 +1,121 @@
+
+main{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.taskList{
+    border: 1px solid var(--col-active);
+    height: 50%;
+    width: 70%;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+
+.strikeout{
+    text-decoration: line-through;
+    color: var(--col-deactive) !important;
+}
+.taskListHeading{
+    font-weight: 600;
+    font-size: 1.2em;
+    letter-spacing: 5.5px;
+    color: var(--col-active);
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom:1px solid var(--col-active);
+}
+
+.taskListDesc{
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+.taskitem{
+    padding: 5px 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.taskitem p{
+    font-weight: 500;
+    color: var(--col-active);
+    flex-grow: 1;
+}
+.checkboxBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input[type="checkbox"]{
+    width: 15px;
+    height: 15px;
+    border-radius: 80px;
+    border-width: 15px;
+    border-color: var(--col-active);
+}
+p.deactive{
+    color: var(--col-deactive);
+    text-align: center;
+    padding-top: 5px;
+}
+
+form{
+    width: 70%;
+    display: flex;
+}
+.inputBox{
+    flex-grow: 1;
+    border: 1px solid var(--col-active);
+    height: 40px;
+    width: 250px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+}
+
+input{
+    padding-left: 10px;
+    outline: none;
+    border: none;
+    flex-grow: 1;
+    color: var(--col-active);
+    font-weight: 500;
+    background-color: transparent;
+}
+
+input::placeholder{
+    color: var(--col-semiactive);
+    font-weight: 400;
+}
+
+input[type="submit"]{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid var(--col-active);
+    flex-grow: 0;
+    padding-right: 10px;
+}
+
+input[type="submit"]:hover{
+    background-color: var(--col-active);
+    color: white;
+    
+}

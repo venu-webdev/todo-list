@@ -1,0 +1,26 @@
+<footer>
+    <p>Copyrights © 2023</p>
+</footer>
+
+<script>
+    let checkboxes = document.querySelectorAll(".checkboxBox");
+    console.log(checkboxes);
+    checkboxes.forEach((checkbox)=>{
+        checkbox.addEventListener("click",()=>{
+            // alert(checkbox.id);
+            let taskItem = checkbox.nextElementSibling;
+            
+            if(Object.values(taskItem.classList).includes("strikeout")){
+                
+                    taskItem.classList.remove("strikeout");
+                }else{
+                taskItem.classList.add("strikeout");
+
+            }
+            console.log(checkbox.nextElementSibling);
+        });
+    });
+
+</script>
+</body>
+</html>

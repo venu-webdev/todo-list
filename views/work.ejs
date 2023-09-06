@@ -1,0 +1,29 @@
+<%-include("header2.ejs")%>
+<main>
+    <form action="/addTaskWork" method="post">
+        <div class="inputBox">
+              <input type="text" name="taskDesc" placeholder="Type something..." required/>
+              <input type="submit" value="Add">
+          </div>
+      </form>
+      
+        <!-- tasklist -->
+        <div class="taskList">
+          <div class="taskListHeading">Task List</div>
+          <div class="taskListDesc">
+              <%  if(locals.taskList){%>
+      
+                  <!-- taskitem -->
+                  <%for(var i=0; i<taskList.length; i++){%>
+                      <div class="taskitem">
+                          <div class="checkboxBox" id=<%= i+1 %>><input type="checkbox"></div>
+                          <p id=<%= i+1 %>><%=taskList[i]%></p>
+                      </div>
+                  <%}%>
+                  <% }else{%>
+                  <p class="deactive">Nothing to show.</p>
+             <%   }%>
+          </div>
+        </div>
+</main>
+<%-include("footer.ejs")%>
